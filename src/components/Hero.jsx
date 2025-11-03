@@ -6,13 +6,13 @@ const Hero = () => {
     <section id="home" className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white">
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode"
+          scene="https://prod.spline.design/wwTRdG1D9CkNs368/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
 
-      {/* Subtle overlay to ensure text contrast over the 3D scene */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/30 to-slate-950/80" />
+      {/* Overlay gradient - non-blocking for interactions with the 3D scene */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/30 to-slate-950/90" />
 
       <div className="relative z-10 max-w-5xl px-6 mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
@@ -25,13 +25,13 @@ const Hero = () => {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#servizi"
-            className="inline-flex items-center justify-center rounded-lg bg-indigo-500 hover:bg-indigo-400 transition-colors px-5 py-3 text-sm sm:text-base font-semibold shadow-lg shadow-indigo-500/20"
+            className="inline-flex items-center justify-center rounded-md bg-blue-500 hover:bg-blue-400 transition-colors px-5 py-3 text-sm sm:text-base font-semibold shadow-lg shadow-blue-500/25 ring-1 ring-transparent hover:ring-blue-400/30"
           >
             Scopri i miei Servizi
           </a>
           <a
             href="#contatti"
-            className="inline-flex items-center justify-center rounded-lg border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors px-5 py-3 text-sm sm:text-base font-semibold"
+            className="inline-flex items-center justify-center rounded-md border border-slate-700 hover:border-blue-500/60 hover:bg-slate-900/50 transition-colors px-5 py-3 text-sm sm:text-base font-semibold"
           >
             Contattami Ora
           </a>

@@ -33,7 +33,7 @@ const Contact = () => {
           </p>
         </header>
 
-        <form onSubmit={handleSubmit} className="grid gap-4 rounded-2xl border border-slate-200/20 bg-white/5 backdrop-blur-sm p-6">
+        <form onSubmit={handleSubmit} className="grid gap-4 rounded-xl border border-slate-200/15 bg-white/5 backdrop-blur-sm p-6 shadow-sm">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium mb-1" htmlFor="name">Nome</label>
@@ -44,7 +44,7 @@ const Contact = () => {
                 required
                 value={form.name}
                 onChange={handleChange}
-                className="w-full rounded-lg bg-slate-900/60 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-2"
+                className="w-full rounded-md bg-slate-900/60 border border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none px-4 py-2"
               />
             </div>
             <div>
@@ -56,7 +56,7 @@ const Contact = () => {
                 required
                 value={form.email}
                 onChange={handleChange}
-                className="w-full rounded-lg bg-slate-900/60 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-2"
+                className="w-full rounded-md bg-slate-900/60 border border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none px-4 py-2"
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ const Contact = () => {
               value={form.subject}
               onChange={handleChange}
               placeholder="Es. Consulenza AI, Sviluppo Make, Preventivo Web App"
-              className="w-full rounded-lg bg-slate-900/60 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-2"
+              className="w-full rounded-md bg-slate-900/60 border border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none px-4 py-2"
             />
           </div>
 
@@ -84,7 +84,7 @@ const Contact = () => {
               rows={6}
               value={form.message}
               onChange={handleChange}
-              className="w-full rounded-lg bg-slate-900/60 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-2"
+              className="w-full rounded-md bg-slate-900/60 border border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none px-4 py-2"
             />
           </div>
 
@@ -96,7 +96,7 @@ const Contact = () => {
               required
               checked={form.consent}
               onChange={handleChange}
-              className="mt-1 h-4 w-4 rounded border-slate-700 text-indigo-500 focus:ring-indigo-500"
+              className="mt-1 h-4 w-4 rounded border-slate-700 text-blue-500 focus:ring-blue-500"
             />
             <label htmlFor="consent" className="text-sm text-slate-300">
               Acconsento al trattamento dei dati personali (GDPR).
@@ -107,7 +107,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={!form.consent}
-              className="w-full md:w-auto inline-flex items-center justify-center rounded-lg bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 disabled:cursor-not-allowed transition-colors px-6 py-3 text-base font-semibold shadow-lg shadow-indigo-500/20"
+              className="w-full md:w-auto inline-flex items-center justify-center rounded-md bg-blue-500 hover:bg-blue-400 disabled:opacity-60 disabled:cursor-not-allowed transition-colors px-6 py-3 text-base font-semibold shadow-lg shadow-blue-500/20 ring-1 ring-transparent hover:ring-blue-400/30"
             >
               Invia Richiesta
             </button>
