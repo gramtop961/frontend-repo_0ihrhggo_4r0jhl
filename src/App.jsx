@@ -1,28 +1,45 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-slate-950 text-white scroll-smooth">
+      {/* Simple sticky navigation */}
+      <header className="sticky top-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur supports-backdrop-blur:bg-slate-950/70">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <a href="#home" className="font-extrabold tracking-tight text-white">Nicolas Micolani</a>
+          <nav className="hidden sm:flex items-center gap-6 text-sm">
+            <a href="#home" className="hover:text-indigo-300 transition-colors">Home</a>
+            <a href="#servizi" className="hover:text-indigo-300 transition-colors">Servizi</a>
+            <a href="#chi-sono" className="hover:text-indigo-300 transition-colors">Chi Sono</a>
+            <a href="#contatti" className="hover:text-indigo-300 transition-colors">Contatti</a>
+          </nav>
+          <a href="#contatti" className="sm:hidden inline-flex items-center justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold hover:bg-indigo-400">Contatti</a>
         </div>
-      </div>
+      </header>
+
+      <main>
+        <Hero />
+        <Services />
+        <About />
+        <Contact />
+      </main>
+
+      <footer className="border-t border-slate-800/60 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-6 py-8 text-sm text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p>© {new Date().getFullYear()} Nicolas Micolani. Tutti i diritti riservati.</p>
+          <div className="flex items-center gap-4">
+            <a href="#servizi" className="hover:text-indigo-300 transition-colors">Servizi</a>
+            <a href="#chi-sono" className="hover:text-indigo-300 transition-colors">Chi Sono</a>
+            <a href="#contatti" className="hover:text-indigo-300 transition-colors">Contatti</a>
+          </div>
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
